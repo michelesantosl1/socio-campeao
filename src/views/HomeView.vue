@@ -17,7 +17,11 @@
         <tbody>
             <tr v-for="socio in socios" :key="socio.id">
                 <td>{{ socio.id }}</td>
-                <td>{{ socio.nome }}</td>
+                <td>
+                  <router-link :to="`/socios/${socio.id}`">
+                    {{ socio.nome }}
+                  </router-link>
+                </td>
                 <td>{{ socio.plano }}</td>
                 <td>{{ socio.telefone }}</td>
                 <td>{{ socio.email }}</td>

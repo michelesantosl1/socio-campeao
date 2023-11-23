@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
 import FilterView from '../views/FilterView.vue'
 import AddSocio from '../views/AddSocio.vue'
+import SocioView from '../views/SocioView'
 
 const routes = [
   {
@@ -43,6 +44,12 @@ const routes = [
     path: '/socios/adicionar',
     name: 'add',
     component: AddSocio
+  },
+  {
+    path: '/socios/:id',
+    name: "SocioView",
+    component: SocioView,
+    props: true
   }
 ]
 
